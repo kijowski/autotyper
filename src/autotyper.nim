@@ -29,4 +29,15 @@ proc cli(
 
 when isMainModule:
   import cligen
-  dispatch(cli)
+  dispatch(cli, help = {
+      "lowWpm": "minimum WPM that typer can slow down to",
+      "topWpm": "maximum WPM that typer can speed up to",
+      "speedupRate": "amount of WPM that typer will gain after correct keystroke",
+      "slowdownRate": "amount of WPM that typer will lose after incorrect keystroke",
+      "mistypeRate": "percentge of incorrect keystrokes",
+      "repetitionRate": "percentage of repeated keystrokes",
+      "skipRate": "percentage of skipped keystrokes",
+      "startWpm": "starting WPM. If set to 0 it will be calculated with (lowWpm + topWpm) / 2",
+      "separator": "string that will separate multiple phrases",
+      "fixErrors": "controls whether typer should fix incorrect keystrokes"
+    })
