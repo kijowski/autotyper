@@ -15,3 +15,10 @@ binDir        = "bin"
 
 requires "nim >= 1.0.2"
 requires "cligen"
+
+# Tasks
+
+task docs, "Generate documentation":
+  rmDir "docs"
+  exec "nim doc --project --index:on --git.url:http://www.wp.pl --git.commit:master --out=docs src/autotyperpkg/typer.nim"
+  exec "nim buildIndex -o:docs/theindex.html docs"
