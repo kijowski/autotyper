@@ -8,7 +8,7 @@ proc ctrlc() {.noconv.} =
 
 setControlCHook(ctrlc)
 
-proc cli(
+proc autotyper(
   lowWpm = 50.Natural,
   topWpm = 90.Natural,
   speedupRate = 5.Natural,
@@ -29,7 +29,7 @@ proc cli(
 
 when isMainModule:
   import cligen
-  dispatch(cli, help = {
+  dispatch(autotyper, help = {
       "lowWpm": "minimum WPM that typer can slow down to",
       "topWpm": "maximum WPM that typer can speed up to",
       "speedupRate": "amount of WPM that typer will gain after correct keystroke",
