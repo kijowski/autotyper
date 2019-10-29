@@ -20,5 +20,5 @@ requires "cligen"
 
 task docs, "Generate documentation":
   rmDir "docs"
-  exec "nim doc --project --index:on --git.url:http://www.wp.pl --git.commit:master --out=docs src/autotyperpkg/typer.nim"
+  exec "nim doc --project --index:on --git.url:https://github.com/kijowski/autotyper --git.commit:master --out=docs src/autotyperpkg/typer.nim"
   exec "nim buildIndex -o:docs/theindex.html docs"
