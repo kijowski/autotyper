@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.1.0"
+version       = "0.2.0"
 author        = "Michal Kijowski"
 description   = "Keyboard typing emulator"
 license       = "MIT"
