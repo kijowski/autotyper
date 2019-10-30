@@ -18,7 +18,7 @@ requires "cligen"
 
 # Tasks
 
-task docs, "Generate documentation":
+task doc, "Generate documentation":
   rmDir "docs"
   exec "nim doc --project --index:on --git.url:https://github.com/kijowski/autotyper --git.commit:master --out=docs src/autotyperpkg/typer.nim"
   exec "nim buildIndex -o:docs/theindex.html docs"
