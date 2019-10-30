@@ -20,8 +20,8 @@ proc autotyper(
   separator = "\n",
   fixErrors = true,
   texts: seq[string]) =
-  var typer = newTyper(lowWpm, topWpm, speedupRate, slowdownRate, mistypeRate,
-      repetitionRate, skipRate, startWpm, separator, fixErrors)
+  var typer = newTyper(lowWpm, topWpm, startWpm, speedupRate, slowdownRate,
+      mistypeRate, repetitionRate, skipRate, separator, fixErrors)
   if texts.len > 0:
     typer.typeitout(texts)
   else:
