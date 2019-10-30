@@ -76,7 +76,7 @@ proc speedup(typer: var Typer): void =
   typer.currentWpm = min(typer.topWpm, typer.currentWpm + typer.speedupRate)
 
 proc currentDelay(typer: Typer): Natural =
-  1000 div ((typer.currentWpm * 5) div 60)
+  result = toInt(1000 / ((typer.currentWpm * 5) / 60))
 
 proc actionDistribution(typer: Typer): seq[int] =
   cumsummed [100-typer.mistypeRate - typer.repetitionRate - typer.skipRate,
